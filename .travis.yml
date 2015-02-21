@@ -1,0 +1,26 @@
+language: node_js
+
+node_js:
+  - "0.10"
+script: npm run $COMMAND
+before_script:
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
+  - "sleep 5"
+
+    # Workaround for Selenium #3280 issue
+  - "sudo sed -i 's/^127\\.0\\.0\\.1.*$/127.0.0.1 localhost/' /etc/hosts"
+
+env:
+  global:
+  - SELENIUM_VERSION=2.42.0
+  matrix:
+  - CLIENT=node COMMAND=test
+  - CLIENT=selenium:firefox COMMAND=test
+  - CLIENT=selenium:phantomjs COMMAND=test
+  - COMMAND=coverage
+
+branches:
+  only:
+  - master
+  - /^pull*$/
