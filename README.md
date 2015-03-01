@@ -11,6 +11,8 @@ Then run:
 
     python -m SimpleHTTPServer 7777
 
-Then open up http://localhost:7777 in a browser. In your console,
-you'll see various tests being run. All of these tests are
-defined in `index.js` and are invoked in `.index.html`.
+Then open up http://localhost:7777 in a browser.
+
+In your console,
+you should see various tests being run. All of these tests are
+defined in `index.js` and are invoked by `index.html`.
