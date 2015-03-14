@@ -6,7 +6,8 @@
   "author": "Nolan Lawson <nolan.lawson@gmail.com>",
   "license": "Apache",
   "scripts": {
-    "build": "mkdir -p dist && node ./bin/build.js && npm run min"
+    "build": "mkdir -p dist && node ./bin/build.js && npm run min",
+    "min": "uglifyjs dist/async-functions-in-pouchdb.js -mc > dist/async-functions-in-pouchdb.min.js"
   },
   "dependencies": {
     "babel-runtime": "^4.6.3",
