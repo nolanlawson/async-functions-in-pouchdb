@@ -9,7 +9,7 @@ Run this:
 
 Then run:
 
-    python -m SimpleHTTPServer 7777
+    npm start
 
 Then open up http://localhost:7777 in a browser.
 
